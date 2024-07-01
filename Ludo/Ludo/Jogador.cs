@@ -27,6 +27,90 @@ namespace Ludo
             }
         }
 
+        public void LancarDados2()
+        {
+            Random dado = new Random();
+            int dado1 = 0;
+            int dado2 = 0;
+            int dado3 = 0;
+
+            valorDado1 = dado.Next(1, 7);
+            if (valorDado1 == 6)
+            {
+                valorDado2 = dado.Next(1, 7);
+                if (valorDado2 == 6)
+                {
+                    valorDado3 = dado.Next(1, 7);
+                    if (valorDado3 == 6)
+                    {
+                        valorDado1 = 0;
+                        valorDado2 = 0;
+                        valorDado3 = 0;
+                        Console.WriteLine("Você tirou três 6 seguidos no dado, você perdeu a vez");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"Valores dos dados: {valorDado1}, {valorDado2}, {valorDado3}");
+                        for(int p = 0; p < 4;p++)
+                        {
+                            Console.WriteLine($"O seu peão {p} está na posição: {ludo.jogador[i].peoes[p].posicao}");
+                        }
+                        Console.Write("Escolha o peão para mover (0, 1, 2 ou 3): "); // pode trocar isso por um método que mostra no console apenas os peoes disponiveis
+                        int peaoEscolhido = int.Parse(Console.ReadLine());
+                        Console.WriteLine
+
+                        for(int p = 0; p < 4;p++)
+                        {
+                            Console.WriteLine($"O seu peão {p} está na posição: {ludo.jogador[i].peoes[p].posicao}");
+                        }
+                        Console.Write("Escolha o peão para mover com o dado que tirou {valordado2} (0, 1, 2 ou 3): "); // pode trocar isso por um método que mostra no console apenas os peoes disponiveis
+                        int peaoEscolhido = int.Parse(Console.ReadLine());
+                        //verificação..........
+                        for(int p = 0; p < 4;p++)
+                        {
+                            Console.WriteLine($"O seu peão {p} está na posição: {ludo.jogador[i].peoes[p].posicao}");
+                        }
+                        Console.Write("Escolha o peão para mover com o dado que tirou {valordado3} (0, 1, 2 ou 3): "); // pode trocar isso por um método que mostra no console apenas os peoes disponiveis
+                        int peaoEscolhido = int.Parse(Console.ReadLine());
+                        //verificação..........
+                    }    
+                }
+                else
+                {
+                    Console.WriteLine($"Valores dos dados: {valorDado1}, {valorDado2}");
+                    for(int p = 0; p < 4;p++)
+                    {
+                        Console.WriteLine($"O seu peão {p} está na posição: {ludo.jogador[i].peoes[p].posicao}");
+                    }
+                    Console.Write("Escolha o peão para mover com o dado que tirou {valordado1} (0, 1, 2 ou 3): "); // pode trocar isso por um método que mostra no console apenas os peoes disponiveis
+                    int peaoEscolhido = int.Parse(Console.ReadLine());
+                    //verificação..........
+
+                    for(int p = 0; p < 4;p++)
+                    {
+                        Console.WriteLine($"O seu peão {p} está na posição: {ludo.jogador[i].peoes[p].posicao}");
+                    }
+                    Console.Write("Escolha o peão para mover com o dado que tirou {valordado2} (0, 1, 2 ou 3): "); // pode trocar isso por um método que mostra no console apenas os peoes disponiveis
+                    int peaoEscolhido = int.Parse(Console.ReadLine());
+                    //verificação..........
+                    
+                }
+            }
+            else
+            {
+                Console.WriteLine($"Valor do dado: {valorDado1}");
+                for(int p = 0; p < 4;p++)
+                {
+                    Console.WriteLine($"O seu peão {p} está na posição: {ludo.jogador[i].peoes[p].posicao}");
+                }
+                Console.Write("Escolha o peão para mover (0, 1, 2 ou 3): "); // pode trocar isso por um método que mostra no console apenas os peoes disponiveis
+                int peaoEscolhido = int.Parse(Console.ReadLine());
+                //verificação..........
+            }
+            
+        }
+        
+        
         public void LancarDados(out int valorDado1, out int valorDado2, out int valorDado3)
         {
             Random dado = new Random();
