@@ -82,6 +82,13 @@ class program
 
                     }
 
+                    //mostrar as posições dos peos
+
+                    for(int p = 0; p < 4;p++)
+                    {
+                        Console.WriteLine($"O seu peão {p} está na posição: {ludo.jogador[i].peoes[p].posicao}");
+                    }
+
                     Console.Write("Escolha o peão para mover (0, 1, 2 ou 3): ");
                     int peaoEscolhido = int.Parse(Console.ReadLine());
 
