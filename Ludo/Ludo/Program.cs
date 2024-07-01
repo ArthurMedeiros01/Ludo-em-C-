@@ -10,6 +10,7 @@ class program
 {
     static void Main(string[] args)
     {
+        static StreamWriter arq = new StreamWriter("LogDaPartida.txt", false, Encoding.UTF8);
 
         Console.WriteLine("Selecione a quantidade de jogadores: \nDigite 2 Caso jogue com 2 jogadores e 4 caso jogue com 4 jogadores");
         int quantJogadores = int.Parse(Console.ReadLine());
