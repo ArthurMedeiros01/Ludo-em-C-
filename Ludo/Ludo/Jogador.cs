@@ -54,8 +54,64 @@ namespace Ludo
         {
             peoes[peaoIdentificador].posicao += valorDado;
             return peoes[peaoIdentificador].posicao;
-
         }
+
+        public void velidarJogada(peaoIdentificador, int ValorDado)
+        {
+            if(peoes[peaoIdentificador].posicao == 0 && valorDado ==6)
+            {
+                peoes[peaoIdentificador].posicao == 1;
+            }
+            else if (peoes[peaoIdentificador].posicao != 0)
+            {
+                 if((peoes[peaoIdentificador].posicao + valorDado) <= 57)
+                 {
+                 MoverPeao(peaoIdentificador, valorDado);
+                	if(peoes[peaoIdentificador].posicao == 57)
+                    {
+                	Console.WriteLine(“Você chegou a casa final, agora você pode rolar mais um dado”);
+                    LancarDados();
+                        //mudar LancarDados dps***********
+                	}
+             }
+            else{
+            Console.WriteLine(“Para chegar à casa final (triângulo), deve-se tirar o valor exato remanescente”);
+            }
+            	
+            }
+            else{
+            Console.WriteLine(“O peão só pode ser movido para o início da corrida, na casa de sua respectiva cor, quando um jogador lançar um 6 no dado”);
+            }
+        }
+
+        public bool disponibilizarPeao(int ValorDado, int peaoIdentificador)
+        {
+            if(peoes[peaoIdentificador].posicao == 0 && valorDado ==6)
+            {
+                return true;
+            }
+            else if (peoes[peaoIdentificador].posicao != 0)
+            {
+                 if((peoes[peaoIdentificador].posicao + valorDado) <= 57)
+                 {
+                     return true;
+                	if(peoes[peaoIdentificador].posicao == 57)
+                    {
+                	    return false;
+                	}
+             }
+            else
+            {
+                return false;
+            }
+            	
+            }
+            else
+            {
+                return false;
+            }
+        }
+
 
         public bool Vitoria()
         {
