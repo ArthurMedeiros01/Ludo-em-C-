@@ -1,2 +1,0 @@
-D:\Users\1454084\source\repos\PINDUCA\PINDUCA\obj\Debug\PINDUCA.csproj.AssemblyReference.cache
-D:\Users\1454084\source\repos\PINDUCA\PINDUCA\obj\Debug\PINDUCA.csproj.CoreCompileInputs.cache
