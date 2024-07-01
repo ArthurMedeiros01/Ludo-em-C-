@@ -168,7 +168,7 @@ namespace Ludo
             }
         }
 
-        public bool disponibilizarPeao(int ValorDado, int peaoIdentificador)
+        public bool VerificarDisponibilidadePeao(int ValorDado, int peaoIdentificador)
         {
             if(peoes[peaoIdentificador].posicao == 0 && valorDado ==6)
             {
