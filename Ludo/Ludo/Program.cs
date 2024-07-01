@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using Ludo;
 
 class program
 {
     static void Main(string[] args)
     {
+        StreamWriter arq = new StreamWriter("LogDaPartida.txt", false, Encoding.UTF8);
 
         Console.WriteLine("Selecione a quantidade de jogadores: \nDigite 2 Caso jogue com 2 jogadores e 4 caso jogue com 4 jogadores");
         int quantJogadores = int.Parse(Console.ReadLine());
@@ -19,22 +21,22 @@ class program
             Jogador jogador1 = new Jogador("vermelho", 0, nome1);
 
             Console.WriteLine("Digite o nome do jogador da cor amarela");
+            Console.WriteLine("Digite o nome do jogador da cor amarela");
             string nome2 = Console.ReadLine();
             Jogador jogador3 = new Jogador("Amarelo", 2, nome2);
 
-
-            Jogador jogador2 = new Jogador("´Verde", 1, "...");
-            Jogador jogador4 = new Jogador("Azul", 3, "...");
-
             Tabuleiro ludo = new Tabuleiro(jogador1, jogador3, quantJogadores);
 
-            while (jogador1.Vitoria() == false || jogador3.Vitoria() == false)
+             while (ludo.jogadores[0].Vitoria() == false || ludo.jogadores[1].Vitoria() == false)
             {
-                for (int i = 0; i < 4; i += 2)
+                for (int i = 0; i < ludo.jogadores.Length; i++)
                 {
-                    ludo.VerificarCaptura(ludo.jogadores[i].identificador, ludo.jogadores[i].peoes[i].identificador);
+                     Console.WriteLine($"Vez do jogador {ludo.jogadores[i].nome} ({ludo.jogadores[i].cor})");
+                    ludo.jogadores[i].LancarDados();
+
+                    ludo.jogadores[0].Vitoria();
+                    ludo.jogadores[1].Vitoria();
                 }
-                Console.ReadLine();
             }
         }
         else if (quantJogadores == 4)
