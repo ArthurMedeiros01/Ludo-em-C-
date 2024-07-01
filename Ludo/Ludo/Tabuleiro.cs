@@ -144,7 +144,8 @@ namespace Ludo
                             else
                             {
                                 jogadores[i].peoes[j].RetornarCasa();
-                                Console.WriteLine($"O peão {jogadores[i].peoes[j].identificador} do jogador {jogadores[i].nome} Foi capiturado");
+                                Console.WriteLine($"O peão {jogadores[i].peoes[j].identificador} do jogador {jogadores[i].nome} Foi capiturado \nParabens agora você pode fazer mais uma lançamento de dados");
+                                jogador[idDoJogadorQueMoveu].LancarDados();
                             }
                         }
                     }
