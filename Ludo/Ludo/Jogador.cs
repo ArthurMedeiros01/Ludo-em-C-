@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -63,7 +63,7 @@ namespace Ludo
                         {
                             Console.Write($"Escolha o peão para mover com o dado que tirou {valorDado1} (0, 1, 2 ou 3): ");
                             peaoEscolhido = int.Parse(Console.ReadLine());
-                        } while (!VerificarDisponibilidadePeao(peaoEscolhido, valorDado1));
+                        } while (VerificarDisponibilidadePeao(peaoEscolhido, valorDado1));
 
                         validarJogada(peaoEscolhido, valorDado1);
 
@@ -77,7 +77,7 @@ namespace Ludo
                         {
                             Console.Write($"Escolha o peão para mover com o dado que tirou {valorDado2} (0, 1, 2 ou 3): ");
                             peaoEscolhido2 = int.Parse(Console.ReadLine());
-                        } while (!VerificarDisponibilidadePeao(peaoEscolhido, valorDado2));
+                        } while (VerificarDisponibilidadePeao(peaoEscolhido, valorDado2));
 
                         validarJogada(peaoEscolhido2, valorDado2);
 
@@ -91,7 +91,7 @@ namespace Ludo
                         {
                             Console.Write($"Escolha o peão para mover com o dado que tirou {valorDado3} (0, 1, 2 ou 3): ");
                             peaoEscolhido3 = int.Parse(Console.ReadLine());
-                        } while (!VerificarDisponibilidadePeao(peaoEscolhido3, valorDado3));
+                        } while (VerificarDisponibilidadePeao(peaoEscolhido3, valorDado3));
 
                         validarJogada(peaoEscolhido3, valorDado3);
 
@@ -110,7 +110,7 @@ namespace Ludo
                     {
                         Console.Write($"Escolha o peão para mover com o dado que tirou {valorDado1} (0, 1, 2 ou 3): ");
                         peaoEscolhido = int.Parse(Console.ReadLine());
-                    } while (!VerificarDisponibilidadePeao(peaoEscolhido, valorDado1));
+                    } while (VerificarDisponibilidadePeao(peaoEscolhido, valorDado1));
 
                     validarJogada(peaoEscolhido, valorDado1);
 
@@ -124,7 +124,7 @@ namespace Ludo
                     {
                         Console.Write($"Escolha o peão para mover com o dado que tirou {valorDado2} (0, 1, 2 ou 3): ");
                         peaoEscolhido2 = int.Parse(Console.ReadLine());
-                    } while (!VerificarDisponibilidadePeao(peaoEscolhido, valorDado2));
+                    } while (VerificarDisponibilidadePeao(peaoEscolhido, valorDado2));
 
                     validarJogada(peaoEscolhido2, valorDado2);
                 }
@@ -142,7 +142,7 @@ namespace Ludo
                 {
                     Console.Write($"Escolha o peão para mover com o dado que tirou {valorDado1} (0, 1, 2 ou 3): ");
                     peaoEscolhido = int.Parse(Console.ReadLine());
-                } while (!VerificarDisponibilidadePeao(peaoEscolhido, valorDado1));
+                } while (VerificarDisponibilidadePeao(peaoEscolhido, valorDado1));
 
                 validarJogada(peaoEscolhido, valorDado1);
             }
